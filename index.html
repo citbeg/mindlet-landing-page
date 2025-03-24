@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mindlet - Your Personal Thought Organizer</title>
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/10B981/brain.png"/>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
     body {
       font-family: 'Poppins', sans-serif;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      transition: transform 0.3s ease;
     }
   </style>
 </head>
@@ -16,35 +22,43 @@
 
 <header class="py-8 px-4 border-b">
   <div class="max-w-5xl mx-auto flex justify-between items-center">
-    <h1 class="text-4xl font-bold text-red-600">Mindlet</h1>
-    <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-5 rounded-full shadow-lg transition duration-300">
+    <div class="flex items-center animate__animated animate__fadeInDown">
+      <img src="https://img.icons8.com/ios-filled/50/10B981/brain.png" alt="Mindlet Logo" class="w-10 h-10 mr-2">
+      <h1 class="text-4xl font-bold text-green-600">Mindlet</h1>
+    </div>
+    <button class="bg-green-600 hover:bg-green-700 text-white py-2 px-5 rounded-full shadow-lg transition duration-300 animate__animated animate__fadeInDown">
       Try Free
     </button>
   </div>
 </header>
 
 <section class="text-center max-w-4xl mx-auto px-4 py-20">
-  <h2 class="text-5xl font-extrabold text-gray-900 mb-6">
+  <h2 class="text-5xl font-extrabold text-gray-900 mb-6 animate__animated animate__fadeInUp">
     Turn your thoughts into action
   </h2>
-  <p class="text-xl text-gray-700 mb-10">
+  <p class="text-xl text-gray-700 mb-10 animate__animated animate__fadeInUp animate__delay-1s">
     Mindlet organizes your busy life effortlessly. Speak your thoughts, we'll handle the rest—custom lists, smart reminders, and visual progress tracking.
   </p>
 
-  <div class="flex justify-center mb-12">
+  <div class="flex justify-center mb-12 animate__animated animate__fadeInUp animate__delay-2s">
     <form id="emailForm" class="flex w-full max-w-md">
       <input id="emailInput" type="email" placeholder="Your email address" required
-             class="flex-grow py-3 px-5 rounded-l-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
-      <button type="submit" class="bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-r-full transition duration-300">
+             class="flex-grow py-3 px-5 rounded-l-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-r-full transition duration-300">
         Get Early Access
       </button>
     </form>
   </div>
 
-  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-    <div class="text-center">
-      <div class="bg-red-100 inline-block p-4 rounded-full mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <!-- Embedded GitHub-hosted image -->
+  <img src="https://raw.githubusercontent.com/citbeg/mindlet-landing-page/main/mindlet%20screenshot.png" 
+       alt="Mindlet Prototype" 
+       class="rounded-lg shadow-lg mb-16 mx-auto animate__animated animate__fadeInUp animate__delay-3s max-w-3xl w-full">
+
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+    <div class="text-center feature-card shadow-xl rounded-lg p-6">
+      <div class="bg-green-100 inline-block p-4 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4v1H7v6h10v-6h-1v-1c0-2.21-1.79-4-4-4z" />
         </svg>
       </div>
@@ -52,9 +66,9 @@
       <p class="text-gray-600">Instantly record thoughts and tasks using your voice.</p>
     </div>
 
-    <div class="text-center">
-      <div class="bg-red-100 inline-block p-4 rounded-full mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="text-center feature-card shadow-xl rounded-lg p-6">
+      <div class="bg-green-100 inline-block p-4 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
         </svg>
       </div>
@@ -62,9 +76,9 @@
       <p class="text-gray-600">AI-powered task organization tailored for your lifestyle.</p>
     </div>
 
-    <div class="text-center">
-      <div class="bg-red-100 inline-block p-4 rounded-full mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="text-center feature-card shadow-xl rounded-lg p-6">
+      <div class="bg-green-100 inline-block p-4 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
       </div>
@@ -72,6 +86,12 @@
       <p class="text-gray-600">Visualize your productivity and stay motivated.</p>
     </div>
   </div>
+
+  <section class="max-w-5xl mx-auto py-10 px-4 mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Help Us Improve Mindlet!</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoJxIzVsRmsWBJ-wgswneiV0ghl6nassE-EWF9NfoNkk4QxQ/viewform?embedded=true" width="100%" height="2466" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </section>
+
 </section>
 
 <footer class="bg-gray-900 py-6">
