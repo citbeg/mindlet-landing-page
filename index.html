@@ -3,76 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mindlet - Instantly Capture and Organize Thoughts</title>
+  <title>Mindlet - Your Personal Thought Organizer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9fafb; }
-    header { background-color: #4a90e2; color: white; padding: 20px; text-align: center; }
-    nav ul { list-style: none; padding: 0; margin-top: 10px; }
-    nav ul li { display: inline-block; margin: 0 15px; }
-    nav ul li a { color: white; text-decoration: none; font-weight: 600; }
-    #hero { padding: 60px 20px; text-align: center; background-color: #ffffff; color: #333; }
-    #hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
-    .cta-button { background-color: #4a90e2; color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; }
-    section { padding: 50px 20px; text-align: center; }
-    .features-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-    .feature { width: 250px; }
-    .feature img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; }
-    footer { background-color: #e6f0fa; padding: 20px; text-align: center; color: #555; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
   </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-blue-100">
 
-  <header>
-    <h1>Mindlet</h1>
-    <nav>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#signup">Sign Up</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="py-8 px-4">
+  <div class="max-w-5xl mx-auto flex justify-between items-center">
+    <h1 class="text-4xl font-bold text-indigo-700">Mindlet</h1>
+    <button class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-5 rounded-full shadow-lg transition duration-300">
+      Try Free
+    </button>
+  </div>
+</header>
 
-  <section id="hero">
-    <h2>Instantly Capture & Organize Your Busy Thoughts</h2>
-    <p>Mindlet turns your spontaneous ideas, reminders, and tasks into actionable lists—so you don't have to.</p>
-    <a href="#signup" class="cta-button">Get Early Access</a>
-  </section>
+<section class="text-center max-w-4xl mx-auto px-4 py-20">
+  <h2 class="text-5xl font-extrabold text-gray-800 mb-6">
+    Turn your thoughts into action
+  </h2>
+  <p class="text-xl text-gray-600 mb-10">
+    Mindlet organizes your busy life effortlessly. Speak your thoughts, we'll handle the rest—custom lists, smart reminders, and visual progress tracking.
+  </p>
 
-  <section id="features">
-    <div class="features-container">
-      <div class="feature">
-        <img src="https://source.unsplash.com/random/200x200?microphone,blue" alt="Voice Capture">
-        <h3>Effortless Voice Capture</h3>
-        <p>Speak your tasks and reminders hands-free.</p>
+  <div class="flex justify-center mb-12">
+    <form id="emailForm" class="flex w-full max-w-md">
+      <input id="emailInput" type="email" placeholder="Your email address" required
+             class="flex-grow py-3 px-5 rounded-l-full border border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-r-full transition duration-300">
+        Get Early Access
+      </button>
+    </form>
+  </div>
+
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="text-center">
+      <div class="bg-indigo-100 inline-block p-4 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4v1H7v6h10v-6h-1v-1c0-2.21-1.79-4-4-4z" />
+        </svg>
       </div>
-      <div class="feature">
-        <img src="https://source.unsplash.com/random/200x200?notes,white" alt="Quick Notes">
-        <h3>Quick Note-taking</h3>
-        <p>Quickly jot down ideas without worrying about structure.</p>
-      </div>
-      <div class="feature">
-        <img src="https://source.unsplash.com/random/200x200?organize,soft" alt="Automatic Organization">
-        <h3>Automatic Organization</h3>
-        <p>Your notes are instantly sorted into helpful categories.</p>
-      </div>
+      <h3 class="text-2xl font-semibold text-gray-700 mb-2">Voice Capture</h3>
+      <p class="text-gray-500">Instantly record thoughts and tasks using your voice.</p>
     </div>
-  </section>
 
-  <section id="about" style="background-color: #ffffff;">
-    <h3>Why Mindlet?</h3>
-    <p>Mindlet is designed specifically for busy parents, professionals, and anyone needing instant, stress-free organization.</p>
-  </section>
+    <div class="text-center">
+      <div class="bg-indigo-100 inline-block p-4 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-semibold text-gray-700 mb-2">Intelligent Lists</h3>
+      <p class="text-gray-500">AI-powered task organization tailored for your lifestyle.</p>
+    </div>
 
-  <section id="signup">
-    <h3>Simplify Your Life Today</h3>
-    <p>Join Mindlet now and keep your busy thoughts neatly organized.</p>
-    <a href="#signup" class="cta-button">Join Now</a>
-  </section>
+    <div class="text-center">
+      <div class="bg-indigo-100 inline-block p-4 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-semibold text-gray-700 mb-2">Progress Insights</h3>
+      <p class="text-gray-500">Visualize your productivity and stay motivated.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2024 Mindlet. All Rights Reserved.</p>
-  </footer>
+<footer class="bg-gray-800 py-6">
+  <div class="max-w-5xl mx-auto text-center text-gray-400">
+    &copy; 2024 Mindlet. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('emailForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value;
+    alert(`Thanks for signing up, ${email}! We'll keep you updated.`);
+    document.getElementById('emailForm').reset();
+  });
+</script>
 
 </body>
 </html>
